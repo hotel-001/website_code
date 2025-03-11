@@ -779,7 +779,7 @@ a:hover {
 
 .icons-top,
 .icons-top li {
-    padding: 0;
+    padding: 10px;
     margin: 0;
     list-style: none;
 }
@@ -792,8 +792,8 @@ a:hover {
     border-radius: 50%;
     background: #fff;
     color: #394f4b;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     position: relative;
     opacity: .8;
@@ -2158,3 +2158,13 @@ footer .form-subscribe .form-control:focus {
 #own_font {
     font-family: 'Times New Roman', Times, serif;
 }
+
+.own_size {
+    font-size: 25px;
+}
+
+
+/* 
+.own_size_2 {
+    width: 20px;
+} */
