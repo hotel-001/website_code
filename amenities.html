@@ -1,0 +1,501 @@
+<!-- /*
+* Template Name: Luxuryvilla
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+/* =============================================
+   HEADER + ICONS – Same style as INDEX page
+   ============================================= */
+
+:root {
+  --page-bg: #E6E3D3;      /* pale olive cream */
+  --text-color: #3F3A34;   /* charcoal brown  */
+  --accent: #C1A35F;       /* muted gold      */
+  --accent-hover: #B89C82; /* light clay hover*/
+}
+
+/* ---- Base page background so no strip shows ---- */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: var(--page-bg) !important;
+}
+
+/* ---- NAVBAR ---- */
+.untree_co--site-nav,
+.js-sticky-nav,
+.untree_co--site-nav.is-sticky,
+.js-sticky-nav.is-sticky,
+.untree_co--site-nav.scrolled {
+  background-color: var(--page-bg) !important;
+  border: none !important;
+  box-shadow: none !important;
+  top: 0 !important;
+  margin: 0 !important;
+  padding: 10px 0 !important;
+}
+
+.untree_co--site-logo {
+  color: #000 !important;
+  font-weight: 700;
+}
+
+.site-nav-ul li a {
+  color: #000 !important;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.site-nav-ul li a:hover,
+.site-nav-ul li.active a {
+  color: var(--accent-hover) !important;
+}
+
+.site-nav-ul li.active a::after {
+  background-color: var(--accent-hover) !important;
+}
+
+/* ---- SOCIAL ICONS – round & coloured ---- */
+.icons-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 6px;
+  object-fit: contain;
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+
+/* brand colours */
+.social-icon.fb { background-color: #1877F2; }  /* facebook */
+.social-icon.wa { background-color: #25D366; }  /* whatsapp */
+.social-icon.ig {
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* hover zoom */
+.social-icon:hover { transform: scale(1.2); }
+
+/* remove overlay/loader line */
+#untree_co--overlayer, .loader { display:none !important; background:none !important; }
+.js-sticky-wrapper { background-color: var(--page-bg) !important; border:none; margin:0; padding:0; }
+</style>
+
+    <title>VAMSI’S WOODSIDE</title>
+</head>
+
+<body>
+
+    <div id="untree_co--overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <nav class="untree_co--site-mobile-menu">
+        <div class="close-wrap d-flex">
+            <a href="#" class="d-flex ml-auto js-menu-toggle">
+                <span class="close-label">Close</span>
+                <div class="close-times">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                </div>
+            </a>
+        </div>
+        <div class="site-mobile-inner"></div>
+    </nav>
+
+
+    <div class="untree_co--site-wrap">
+
+        <nav class="untree_co--site-nav js-sticky-nav">
+            <div class="container d-flex align-items-center">
+                <div class="logo-wrap">
+                    <img src="own image/logo.jpg" alt="" style="width: 65px; border-radius: 50%;">
+                    <a href="index.html" class="untree_co--site-logo">VAMSI’S WOODSIDE</a>
+                </div>
+                <div class="site-nav-ul-wrap text-center d-none d-lg-block">
+                    <ul class="site-nav-ul js-clone-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <!-- <li class="has-children">
+                            <a href="rooms.html">Rooms</a>
+                            <ul class="dropdown">
+                                <li class="has-children">
+                                    <a href="#">King Bedroom</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="#">King Bedroom</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Queen &amp; Double Bedroom</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Le Voila Suite</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Queen &amp; Double Bedroom</a>
+                                </li>
+                                <li>
+                                    <a href="#">Le Voila Suite</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <li class="active"><a href="amenities.html">Amenities</a></li>
+
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="icons-wrap text-md-right">
+
+                    <ul class="icons-top d-none d-lg-block"
+    style="display:flex; align-items:center; justify-content:flex-end; gap:15px; list-style:none; margin:0; padding:0; background:none;">
+
+  <li style="background:none;">
+    <a href="#" style="background:none; padding:0; border:none;">
+      <img src="facebook.png" alt="facebook"
+     style="width:26px; height:26px; object-fit:contain; border:none; background:none; transition:0.3s; cursor:pointer;"
+     onmouseover="this.style.transform='scale(1.2)'" 
+     onmouseout="this.style.transform='scale(1)'">    </a>
+  </li>
+
+  <li style="background:none;">
+    <a href="https://wa.me/917550009664?text=Hello%2C%20I'm%20interested%20to%20book%20your%20villa!"
+       style="background:none; padding:0; border:none;">
+      <img src="whatsapp.png" alt="whatsapp"
+     style="width:26px; height:26px; object-fit:contain; border:none; background:none; transition:0.3s; cursor:pointer;"
+     onmouseover="this.style.transform='scale(1.2)'" 
+     onmouseout="this.style.transform='scale(1)'">
+    </a>
+    </a>
+  </li>
+
+  <li style="background:none;">
+    <a href="https://www.instagram.com/vamsis_woodside"
+       style="background:none; padding:0; border:none;">
+      <img src="instagram.png" alt="Instagram"
+     style="width:26px; height:26px; object-fit:contain; border:none; background:none; transition:0.3s; cursor:pointer;"
+     onmouseover="this.style.transform='scale(1.2)'" 
+     onmouseout="this.style.transform='scale(1)'">
+    </a>
+  </li>
+
+</ul>
+
+                    <!-- Mobile Toggle -->
+                    <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="site-untree_co--main">
+
+
+            <div class="untree_co--site-hero inner-page" style="background-image: url('own image/game.jpeg')">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-7 text-center">
+                            <div class="site-hero-contents" data-aos="fade-up">
+                                <h1 class="hero-heading text-white">Amenities</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Amenities -->
+
+            <div class="untree_co--site-section">
+                <div class="container">
+                    <div class="container pt-0 pb-5">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-6 section-heading" data-aos="fade-up">
+                                <h3 class="text-center">villa Amenities</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row custom-row-02192 align-items-stretch">
+                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="media-29191 text-center h-100">
+                                <div class="media-29191-icon">
+                                    <img src="own asset/svg/bedroom.svg" alt="Image" class="img-fluid">
+                                </div>
+                                <h3>Spacious 3 Bedrooms</h3>
+                                <p>Enjoy a comfortable stay in well-furnished, airy rooms designed for relaxation and luxury.</p>
+                                <p>
+                                    <p>
+                                        <a href="#" class="readmore reverse"></a>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="media-29191 text-center h-100">
+                                <div class="media-29191-icon">
+                                    <img src="own asset/svg/wifi.svg" alt="Image" class="img-fluid">
+                                </div>
+                                <h3>Wi-Fi & Smart TV </h3>
+                                <p> Stay connected with high-speed internet and enjoy unlimited entertainment with a Smart TV in every room.</p>
+                                <p>
+                                    <p>
+                                        <a href="#" class="readmore reverse"></a>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="media-29191 text-center h-100">
+                                <div class="media-29191-icon">
+                                    <img src="own asset/svg/fire.svg" alt="Image" class="img-fluid">
+                                </div>
+                                <h3>Bonfire Area</h3>
+                                <p> Gather around a cozy bonfire under the stars, perfect for memorable evenings with family and friends.</p>
+                                <p>
+                                    <p>
+                                        <a href="#" class="readmore reverse"></a>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="media-29191 text-center h-100">
+                                <div class="media-29191-icon">
+                                    <img src="own asset/svg/kitchen.svg" alt="Image" class="img-fluid">
+                                </div>
+                                <h3>Fully Equipped Kitchen</h3>
+                                <p> Cook delicious meals with ease using our fridge, cutlery, cooking gas with a stove, and essential kitchenware.</p>
+                                <p>
+                                    <p>
+                                        <a href="#" class="readmore reverse"></a>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+                            <div class="media-29191 text-center h-100">
+                                <div class="media-29191-icon">
+                                    <img src="images/svg/partners.svg" alt="Image" class="img-fluid">
+                                </div>
+
+                                <h3>Games & Recreation</h3>
+                                <p>Engage in fun indoor and outdoor games, ensuring entertainment for guests of all ages.</p>
+                                <p>
+                                    <p>
+                                        <a href="#" class="readmore reverse"></a>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="media-29191 text-center h-100">
+                                <div class="media-29191-icon">
+                                    <img src="own asset/svg/security.svg" alt="Image" class="img-fluid">
+                                </div>
+                                <h3>24/7 Security & CCTV Coverage</h3>
+                                <p>Your safety is our priority with round-the-clock security, CCTV monitoring, and on-site staff.</p>
+                                <p>
+                                    <p>
+                                        <a href="#" class="readmore reverse"></a>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="untree_co--site-section py-5 bg-body-darker cta " style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center own_font" id="own_font">
+                            <h3 class="own_font">Rent for drivers’ quarters is Rs. 500 per day; Campfire will be provided on demand at additional Rs.1000 each time.</h3>
+                            <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel://+91 94449 66732">+91 94449 66732</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+        <footer class="untree_co--site-footer">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 pr-md-5">
+                        <h3>About Us</h3>
+                        <p>Welcome to VAMSI’S WOODSIDE, where comfort meets nature! Nestled in a serene location, our villa offers a perfect escape from the hustle and bustle of daily life. Whether you're looking for a relaxing getaway, a family vacation,
+                            or a corporate retreat, we provide a luxurious stay with top-notch amenities and personalized hospitality.</p>
+                        <!-- <p><a href="#" class="readmore"></a></p> -->
+                    </div>
+                    <div class="col-md-8 ml-auto">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h3>Navigation</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="index.html">Home</a></li>
+                                    <!-- <li><a href="#">Rooms</a></li> -->
+                                    <li><a href="amenities.html">Amenities</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-9 ml-auto">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <h4>Address</h4>
+                                        <address>It is located 10km from Yercaud lake on the way to Muluvi from Nagaloor.</address>
+                                        <address>Vamsi’s Woodside, 1523/4, Muluvi, <br>  Elavadi, Tamil Nadu 636602</address>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Telephone</h3>
+                                        <p>
+                                            <a href="tel://+919444966732">94449 66732</a> <br>
+                                            <a href="tel://+917550009664">75500 09664 </a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- <h3 class="mb-0">Join our newsletter</h3>
+                                <p>Be the first to know our latest updates and news!</p>
+                                <form action="#" method="" class="form-subscribe">
+                                    <div class="form-group d-flex">
+                                        <input type="email" class="form-control mr-2" placeholder="Enter your email">
+                                        <input type="submit" value="Subscribe" class="btn btn-black px-4 text-white">
+                                    </div>
+                                </form> -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="row mt-5 pt-5 align-items-center">
+                    <div class="col-md-6 text-md-left">
+                        <p>
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://untree.co/" target="_blank" class="text-primary">Untree.co</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <ul class="icons-top icons-dark">
+                            <li>
+                                <a href="#"><span class="icon-facebook"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-twitter"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-instagram"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon-tripadvisor"></span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div> -->
+
+            </div>
+
+        </footer>
+
+    </div>
+    <!-- Search -->
+    <div class="search-wrap">
+        <a href="#" class="close-search js-search-toggle">
+            <span>Close</span>
+        </a>
+        <div class="container">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-md-12">
+                    <form action="#">
+                        <input type="search" name="s" id="s" placeholder="Type a keyword and hit enter..." autocomplete="false">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/vendor/owl.carousel.min.js"></script>
+
+    <script src="js/vendor/jarallax.min.js"></script>
+    <script src="js/vendor/jarallax-element.min.js"></script>
+    <script src="js/vendor/ofi.min.js"></script>
+
+    <script src="js/vendor/aos.js"></script>
+
+    <script src="js/vendor/jquery.lettering.js"></script>
+    <script src="js/vendor/jquery.sticky.js"></script>
+
+    <script src="js/vendor/TweenMax.min.js"></script>
+    <script src="js/vendor/ScrollMagic.min.js"></script>
+    <script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
+    <script src="js/vendor/debug.addIndicators.min.js"></script>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
