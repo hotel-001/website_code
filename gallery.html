@@ -1,494 +1,765 @@
-<!-- /*
-* Template Name: Luxuryvilla
-* Template Author: Untree.co
-* Tempalte URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="own image/logo.jpg">
+  <meta name="description" content="VAMSI'S WOODSIDE – photo gallery of our luxury villa in Yercaud.">
+  <meta name="keywords" content="Vamsi's Woodside gallery, Yercaud villa, photos">
+  <meta name="theme-color" content="#E6E3D3">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700,900|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor/icomoon.style.css">
+  <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/vendor/aos.css">
+<link rel="stylesheet" href="css/vendor/animate.min.css">
+<link rel="stylesheet" href="css/vendor/bootstrap.css">
+<link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+<link rel="stylesheet" href="css/style.css">
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
-    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/vendor/aos.css">
-    <link rel="stylesheet" href="css/vendor/animate.min.css">
-    <link rel="stylesheet" href="css/vendor/bootstrap.css">
-    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
- <style>
-/* =============================================
-   HEADER + ICONS – Same style as INDEX page
-   ============================================= */
-
+<style>
 :root {
-  --page-bg: #E6E3D3;      /* pale olive cream */
-  --text-color: #3F3A34;   /* charcoal brown  */
-  --accent: #C1A35F;       /* muted gold      */
-  --accent-hover: #B89C82; /* light clay hover*/
+--page-bg: #E6E3D3;
+--text-color: #3F3A34;
+--accent: #C1A35F;
 }
 
-/* ---- Base page background so no strip shows ---- */
 html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: var(--page-bg) !important;
+margin: 0;
+padding: 0;
+background-color: var(--page-bg);
+font-family: "Roboto", sans-serif;
 }
 
-/* ---- NAVBAR ---- */
-.untree_co--site-nav,
-.js-sticky-nav,
-.untree_co--site-nav.is-sticky,
-.js-sticky-nav.is-sticky,
-.untree_co--site-nav.scrolled {
-  background-color: var(--page-bg) !important;
-  border: none !important;
-  box-shadow: none !important;
-  top: 0 !important;
-  margin: 0 !important;
-  padding: 10px 0 !important;
+/* HAMBURGER MENU */
+.burger {
+display: none;
+position: relative;
+width: 28px;
+height: 20px;
+cursor: pointer;
+z-index: 10001;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+content: "";
+position: absolute;
+left: 0;
+width: 100%;
+height: 3px;
+background-color: #000;
+transition: 0.3s;
+}
+
+.burger span::before { top: -8px; }
+.burger span::after { top: 8px; }
+
+.burger.active span {
+background-color: transparent;
+}
+.burger.active span::before {
+transform: rotate(45deg);
+top: 0;
+}
+.burger.active span::after {
+transform: rotate(-45deg);
+top: 0;
+}
+
+@media (max-width: 991px) {
+.burger {
+display: block;
+}
+.site-nav-ul-wrap {
+display: none !important;
+}
+}
+
+/* MOBILE MENU - LEFT SIDE LIKE IMAGES */
+.mobile-menu {
+position: fixed;
+top: 0;
+left: -320px; /* HIDDEN on LEFT side */
+width: 300px;
+height: 100vh;
+background: #ffffff;
+transition: left 0.3s ease;
+z-index: 10000;
+box-shadow: 5px 0 15px rgba(0,0,0,0.1); /* Shadow on right side */
+}
+
+.mobile-menu.active {
+left: 0; /* SLIDE IN from LEFT */
+}
+
+.mobile-menu-header {
+padding: 20px;
+border-bottom: 1px solid #f0f0f0;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.close-btn {
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+font-size: 16px;
+color: #000;
+text-decoration: none;
+}
+
+.close-x {
+width: 20px;
+height: 20px;
+position: relative;
+}
+
+.close-x::before,
+.close-x::after {
+content: '';
+position: absolute;
+width: 20px;
+height: 2px;
+background-color: #000;
+top: 50%;
+left: 0;
+}
+
+.close-x::before {
+transform: rotate(45deg);
+}
+
+.close-x::after {
+transform: rotate(-45deg);
+}
+
+.mobile-menu-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.mobile-menu-list li {
+border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu-list li a {
+display: block;
+padding: 18px 25px;
+color: #000;
+text-decoration: none;
+font-size: 16px;
+font-weight: 400;
+transition: background-color 0.2s;
+}
+
+.mobile-menu-list li a:hover {
+background-color: #f8f8f8;
+}
+
+.mobile-menu-list li.active a {
+font-weight: 600;
+background-color: #f8f8f8;
+}
+
+/* NAVBAR */
+.untree_co--site-nav {
+background-color: var(--page-bg);
+padding: 15px 0;
+position: relative;
 }
 
 .untree_co--site-logo {
-  color: #000 !important;
-  font-weight: 700;
+color: #000;
+font-weight: 700;
+text-decoration: none;
+}
+
+.site-nav-ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+gap: 30px;
 }
 
 .site-nav-ul li a {
-  color: #000 !important;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+color: #000;
+text-decoration: none;
+font-weight: 500;
 }
 
-.site-nav-ul li a:hover,
 .site-nav-ul li.active a {
-  color: var(--accent-hover) !important;
+color: var(--accent);
 }
 
-.site-nav-ul li.active a::after {
-  background-color: var(--accent-hover) !important;
-}
-
-/* ---- SOCIAL ICONS – round & coloured ---- */
+/* SOCIAL ICONS */
 .icons-top {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 15px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+display: flex;
+align-items: center;
+gap: 15px;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
-.social-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  padding: 6px;
-  object-fit: contain;
-  transition: transform .3s ease;
-  cursor: pointer;
+.icons-top li a {
+background-color: transparent !important;
 }
 
-/* brand colours */
-.social-icon.fb { background-color: #1877F2; }  /* facebook */
-.social-icon.wa { background-color: #25D366; }  /* whatsapp */
-.social-icon.ig {
-  background: radial-gradient(circle at 30% 107%,
-    #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+.icons-top li img {
+width: 28px;
+height: 28px;
+transition: transform 0.3s;
 }
 
-/* hover zoom */
-.social-icon:hover { transform: scale(1.2); }
+.icons-top li a:hover img {
+transform: scale(1.2);
+}
 
-/* remove overlay/loader line */
-#untree_co--overlayer, .loader { display:none !important; background:none !important; }
-.js-sticky-wrapper { background-color: var(--page-bg) !important; border:none; margin:0; padding:0; }
+/* SLIDER STYLES */
+.unique-slider-container {
+position: relative;
+width: 100%;
+height: 600px;
+overflow: hidden;
+border-radius: 15px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+margin: 20px 0;
+}
+
+.slider-main-view {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.slider-image-container {
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 0.8s ease;
+}
+
+.slider-image-container.active {
+opacity: 1;
+}
+
+.slider-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 15px;
+}
+
+/* Darker gradient background to make text pop */
+.slider-info {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 30px;
+background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+z-index: 10;
+}
+
+/* --- SLIDER TITLE (Full View of Villa) --- */
+.slider-title {
+font-size: 36px;
+font-weight: 900;  /* Extra Bold */
+margin-bottom: 10px;
+font-family: 'Cormorant Garamond', serif;
+color: #ffffff !important;  /* Changed from Gold to WHITE */
+text-shadow: 3px 3px 6px #000000; /* Strong black shadow */
+letter-spacing: 1px;
+}
+
+/* --- SLIDER DESCRIPTION (Text below title) --- */
+.slider-description {
+font-size: 22px;
+font-weight: 700; /* Bold */
+line-height: 1.4;
+color: #ffffff !important;
+text-shadow: 2px 2px 4px #000000; /* Strong black shadow */
+}
+
+.slider-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 0 20px;
+pointer-events: none;
+z-index: 20;
+}
+
+.nav-btn {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.2); /* More transparent */
+backdrop-filter: blur(5px);
+border: 2px solid #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all 0.3s;
+pointer-events: all;
+font-size: 24px;
+color: #fff;
+text-shadow: 1px 1px 2px #000;
+}
+
+.nav-btn:hover {
+background: #fff;
+color: #000;
+text-shadow: none;
+}
+
+/* MORE GALLERY STYLES */
+.more-gallery-section {
+padding: 60px 0;
+}
+
+.section-heading {
+margin-bottom: 40px;
+text-align: center;
+}
+
+.section-heading h3 {
+font-size: 32px;
+font-weight: 700;
+color: var(--text-color);
+position: relative;
+display: inline-block;
+}
+
+.section-heading h3:after {
+content: "";
+position: absolute;
+width: 50px;
+height: 3px;
+background: var(--accent);
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.gutter-2 {
+margin-right: -15px;
+margin-left: -15px;
+}
+
+.gutter-2 > div {
+padding-right: 15px;
+padding-left: 15px;
+margin-bottom: 30px;
+}
+
+.img-fluid {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+.img-fluid:hover {
+transform: scale(1.03);
+}
+
+/* HERO HEADING FIX */
+.untree_co--site-hero {
+height: 400px;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: #fff;
+}
+
+.hero-heading {
+font-size: 52px;
+font-weight: 900; /* Super Bold */
+margin-bottom: 20px;
+font-family: 'Cormorant Garamond', serif;
+color: #ffffff !important;       /* Pure White */
+text-shadow: 3px 3px 8px #000000; /* Heavy Shadow */
+}
+
+/* =====================================
+   CTA (Rent for drivers section) FIX
+   ===================================== */
+.cta {
+background-color: #1E1C1A; /* Dark Background */
+color: #ffffff !important; /* Force White Text */
+padding: 40px 0;
+text-align: center;
+}
+
+.cta h2 {
+margin-bottom: 15px;
+color: #ffffff !important; /* Force White Headline */
+font-weight: 600;
+}
+
+.cta p {
+color: #ffffff !important; /* Force White Paragraph */
+font-size: 18px;
+}
+
+.cta a {
+color: var(--accent);
+text-decoration: none;
+font-weight: 600;
+}
+
+.cta a:hover {
+color: #fff;
+}
+
+/* ==================================================
+   FOOTER FIX (ADDRESS AND TEXT WHITE)
+   ================================================== */
+.untree_co--site-footer {
+background-color: #1E1C1A;
+color: #ffffff !important; /* Force all text white */
+padding: 50px 0 30px;
+}
+
+.untree_co--site-footer h3,
+.untree_co--site-footer h4 {
+color: #ffffff !important; /* Make 'Address', 'About Us' etc White */
+margin-bottom: 20px;
+}
+
+.untree_co--site-footer p, 
+.untree_co--site-footer li,
+.untree_co--site-footer div {
+color: #ffffff !important; /* Make all paragraph text white */
+}
+
+.untree_co--site-footer ul {
+list-style: none;
+padding: 0;
+}
+
+.untree_co--site-footer ul li {
+margin-bottom: 10px;
+}
+
+.untree_co--site-footer a {
+color: #cccccc;
+text-decoration: none;
+}
+
+.untree_co--site-footer a:hover {
+color: var(--accent);
+}
+
+@media (max-width: 768px) {
+.unique-slider-container {
+height: 400px;
+}
+
+.nav-btn {
+width: 45px;
+height: 45px;
+font-size: 18px;
+}
+
+.slider-title {
+font-size: 26px; /* Readable on mobile */
+}
+
+.slider-description {
+font-size:18px;
+}
+}
 </style>
 
-
-    <title>VAMSI’S WOODSIDE</title>
-</head>
+<title>VAMSI'S WOODSIDE</title></head>
 
 <body>
 
-    <div id="untree_co--overlayer"></div>
-    <div class="loader">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-
-
-    <nav class="untree_co--site-mobile-menu">
-        <div class="close-wrap d-flex">
-            <a href="#" class="d-flex ml-auto js-menu-toggle">
-                <span class="close-label">Close</span>
-                <div class="close-times">
-                    <span class="bar1"></span>
-                    <span class="bar2"></span>
-                </div>
-            </a>
-        </div>
-        <div class="site-mobile-inner"></div>
-    </nav>
-
-
-    <div class="untree_co--site-wrap">
-
-        <nav class="untree_co--site-nav js-sticky-nav">
-            <div class="container d-flex align-items-center">
-                <div class="logo-wrap">
-                    <img src="own image/logo.jpg" alt="" style="width: 65px; border-radius: 50%;">
-                    <a href="index.html" class="untree_co--site-logo">VAMSI’S WOODSIDE</a>
-                </div>
-                <div class="site-nav-ul-wrap text-center d-none d-lg-block">
-                    <ul class="site-nav-ul js-clone-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <!-- <li class="has-children">
-                            <a href="rooms.html">Rooms</a>
-                            <ul class="dropdown">
-                                <li class="has-children">
-                                    <a href="#">King Bedroom</a>
-                                    <ul class="dropdown">
-                                        <li>
-                                            <a href="#">King Bedroom</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Queen &amp; Double Bedroom</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Le Voila Suite</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Queen &amp; Double Bedroom</a>
-                                </li>
-                                <li>
-                                    <a href="#">Le Voila Suite</a>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <li><a href="amenities.html">Amenities</a></li>
-
-                        <li class="active"><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-               <div class="icons-wrap text-md-right">
- <ul class="icons-top d-none d-lg-block"
-    style="display:flex; align-items:center; justify-content:flex-end; gap:15px; list-style:none; margin:0; padding:0; background:none;">
-
-  <li style="background:none;">
-    <a href="#" style="background:none; padding:0; border:none;">
-      <img src="facebook.png" alt="facebook"
-     style="width:26px; height:26px; object-fit:contain; border:none; background:none; transition:0.3s; cursor:pointer;"
-     onmouseover="this.style.transform='scale(1.2)'" 
-     onmouseout="this.style.transform='scale(1)'">    </a>
-  </li>
-
-  <li style="background:none;">
-    <a href="https://wa.me/917550009664?text=Hello%2C%20I'm%20interested%20to%20book%20your%20villa!"
-       style="background:none; padding:0; border:none;">
-      <img src="whatsapp.png" alt="whatsapp"
-     style="width:26px; height:26px; object-fit:contain; border:none; background:none; transition:0.3s; cursor:pointer;"
-     onmouseover="this.style.transform='scale(1.2)'" 
-     onmouseout="this.style.transform='scale(1)'">
-    </a>
-    </a>
-  </li>
-
-  <li style="background:none;">
-    <a href="https://www.instagram.com/vamsis_woodside"
-       style="background:none; padding:0; border:none;">
-      <img src="instagram.png" alt="Instagram"
-     style="width:26px; height:26px; object-fit:contain; border:none; background:none; transition:0.3s; cursor:pointer;"
-     onmouseover="this.style.transform='scale(1.2)'" 
-     onmouseout="this.style.transform='scale(1)'">
-    </a>
-  </li>
-
+<!-- MOBILE MENU - LEFT SIDE -->
+<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu-header">
+<a href="#" class="close-btn" onclick="toggleMobileMenu()">
+<span>Close</span>
+<div class="close-x"></div>
+</a>
+</div>
+<ul class="mobile-menu-list">
+<li><a href="index.html">Home</a></li>
+<li><a href="amenities.html">Amenities</a></li>
+<li class="active"><a href="gallery.html">Gallery</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 </div>
-    </a>
 
-                    <!-- Mobile Toggle -->
-                    <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-                        <span></span>
-                    </a>
-                </div>
-            </div>
-        </nav>
+<!-- NAVIGATION -->
+<nav class="untree_co--site-nav">
+<div class="container d-flex align-items-center justify-content-between">
+<div style="display: flex; align-items: center; gap: 15px;">
+<img src="own image/logo.jpg" alt="" style="width: 65px; border-radius: 50%;">
+<a href="index.html" class="untree_co--site-logo">VAMSI'S WOODSIDE</a>
+</div>
 
-        <main class="untree_co--site-main">
+<div class="site-nav-ul-wrap d-none d-lg-block">
+<ul class="site-nav-ul">
+<li><a href="index.html">Home</a></li>
+<li><a href="amenities.html">Amenities</a></li>
+<li class="active"><a href="gallery.html">Gallery</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
 
+<div style="display: flex; align-items: center; gap: 15px;">
+<ul class="icons-top d-none d-lg-block">
+<li><a href="#"><img src="facebook.png" alt="facebook"></a></li>
+<li><a href="https://wa.me/917550009664?text=Hello%2C%20I'm%20interested%20to%20book%20your%20villa!"><img src="whatsapp.png" alt="whatsapp"></a></li>
+<li><a href="https://www.instagram.com/vamsis_woodside"><img src="instagram.png" alt="Instagram"></a></li>
+</ul>
 
-            <div class="untree_co--site-hero inner-page" style="background-image: url('own image/tv.jpeg')">
-                <div class="container">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-md-7 text-center">
-                            <div class="site-hero-contents" data-aos="fade-up">
-                                <h1 class="hero-heading text-white">Gallery</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<a href="#" class="burger d-block d-lg-none" onclick="toggleMobileMenu()">
+<span></span>
+</a>
+</div>
+</div>
+</nav>
 
-            <div class="untree_co--site-section">
+<!-- HERO -->
+<div class="untree_co--site-hero" style="background-image: url('own image/tv.jpeg')">
+<div class="container">
+<h1 class="hero-heading">Gallery</h1>
+</div>
+</div>
 
-                <div class="container-fluid px-0">
+<!-- GALLERY SECTION -->
+<section class="container py-5">
+<div class="text-center mb-5">
+<h2>Experience Our Villa</h2>
+</div>
 
-                    <div class="row justify-content-center text-center pt-0 pb-5">
-                        <div class="col-lg-6 section-heading" data-aos="fade-up">
-                            <h3 class="text-center">Slider Gallery</h3>
-                        </div>
-                    </div>
+<div class="unique-slider-container">
+<div class="slider-main-view">
+<div class="slider-image-container active">
+<img src="saravana img/bedroom2.jpg" alt="Luxurious Bedroom" class="slider-image">
+<div class="slider-info">
+<h3 class="slider-title">Luxurious Bedroom</h3>
+<p class="slider-description">Experience ultimate comfort in our elegantly designed bedrooms.</p>
+</div>
+</div>
+<div class="slider-image-container">
+<img src="saravana img/full view.jpg" alt="Full View of Villa" class="slider-image">
+<div class="slider-info">
+<h3 class="slider-title">Full View of Villa</h3>
+<p class="slider-description">Enjoy breathtaking views of our stunning villa.</p>
+</div>
+</div>
+<div class="slider-image-container">
+<img src="saravana img/living area.jpg" alt="Spacious Living Area" class="slider-image">
+<div class="slider-info">
+<h3 class="slider-title">Spacious Living Area</h3>
+<p class="slider-description">Relax in our beautifully furnished living space.</p>
+</div>
+</div>
+<div class="slider-image-container">
+<img src="saravana img/playing area1.jpg" alt="Children's Play Area" class="slider-image">
+<div class="slider-info">
+<h3 class="slider-title">Children's Play Area</h3>
+<p class="slider-description">A dedicated space for children to play safely.</p>
+</div>
+</div>
+</div>
 
-                    <div class="row align-items-stretch">
-                        <div class="col-9 relative" data-aos="fade-up" data-aos-delay="">
-                            <div class="owl-carousel owl-gallery-big">
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/bedroom2.jpg')"></div>
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/full view.jpg')"></div>
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/living area.jpg')"></div>
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/playing area1.jpg')"></div>
-                            </div>
+<div class="slider-nav">
+<button class="nav-btn" onclick="changeSlide(-1)">‹</button>
+<button class="nav-btn" onclick="changeSlide(1)">›</button>
+</div>
+</div>
+</section>
 
-                            <div class="slider-counter text-center"></div>
+<!-- MORE GALLERY SECTION -->
+<div class="more-gallery-section">
+<div class="container">
+<div class="row justify-content-center text-center pt-0 pb-5">
+<div class="col-lg-6 section-heading" data-aos="fade-up">
+<h3 class="text-center">More Galleries</h3>
+</div>
+</div>
+<div class="row gutter-2">
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="">
+<a href="saravana img/full view.jpg" data-fancybox="gallery">
+<img src="saravana img/full view.jpg" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+<a href="saravana img/nightout.jpg" data-fancybox="gallery">
+<img src="saravana img/nightout.jpg" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+<a href="saravana img/Top.jpg" data-fancybox="gallery">
+<img src="saravana img/Top.jpg" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+<a href="saravana img/bathroom2.jpg" data-fancybox="gallery">
+<img src="saravana img/bathroom2.jpg" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+<a href="saravana img/living area.jpg" data-fancybox="gallery">
+<img src="saravana img/living area.jpg" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="">
+<a href="own image/main_gate.jpeg" data-fancybox="gallery">
+<img src="own image/main_gate.jpeg" alt="Image" class="img-fluid">
+</a>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+<a href="saravana img/inside playing 2.jpg" data-fancybox="gallery">
+<img src="saravana img/inside playing 2.jpg" alt="Image" class="img-fluid">
+</a>
+</div>
+</div>
+</div>
+</div>
 
-                        </div>
-                        <div class="col-3 relative" data-aos="fade-up" data-aos-delay="100">
+<!-- CTA SECTION WITH WHITE TEXT FIX -->
+<section class="cta">
+<div class="container">
+<h2>Rent for drivers' quarters is Rs. 500 per day; Campfire will be provided on demand at additional Rs.1000 each time.</h2>
+<p>If you have any special requests, please feel free to call us. <a href="tel://+91 94449 66732">+91 94449 66732</a></p>
+</div>
+</section>
 
-                            <div class="owl-carousel owl-gallery-small">
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/Top.jpg')">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/inside playing1.jpg')">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/living area.jpg')">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="slide-thumb bg-image" style="background-image: url('saravana img/side.jpg')">
-                                    <a href="#"></a>
-                                </div>
-                            </div>
+<!-- FOOTER -->
+<footer class="untree_co--site-footer">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h3>About Us</h3>
+<p>Welcome to VAMSI'S WOODSIDE, where comfort meets nature! Our villa offers a perfect escape with luxurious amenities and personalized hospitality.</p>
+</div>
+<div class="col-md-8">
+<div class="row">
+<div class="col-md-3">
+<h3>Navigation</h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="amenities.html">Amenities</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-9">
+<div class="row">
+<div class="col-md-6">
+<h4>Address</h4>
+<p>It is located 10km from Yercaud lake on way to Muluvi from Nagaloor.</p>
+<p>Vamsi's Woodside, 1523/4, Muluvi, Elavadi, Tamil Nadu 636602</p>
+</div>
+<div class="col-md-6">
+<h3>Telephone</h3>
+<p><a href="tel://+919444966732">94449 66732</a></p>
+<p><a href="tel://+917550009664">75500 09664</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
 
-                        </div>
-                    </div>
-                </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-            </div>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slider-image-container');
+const totalSlides = slides.length;
 
-            <div class="untree_co--site-section">
-                <div class="container">
-                    <div class="row justify-content-center text-center pt-0 pb-5">
-                        <div class="col-lg-6 section-heading" data-aos="fade-up">
-                            <h3 class="text-center">More Galleries</h3>
-                        </div>
-                    </div>
-                    <div class="row gutter-2">
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
-                            <a href="saravana img/full view.jpg" data-fancybox="gallery">
-                                <img src="saravana img/full view.jpg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <a href="saravana img\nightout.jpg" data-fancybox="gallery">
-                                <img src="saravana img\nightout.jpg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <a href="saravana img/Top.jpg" data-fancybox="gallery">
-                                <img src="saravana img/Top.jpg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                            <a href="saravana img/bathroom.jpg" data-fancybox="gallery">
-                                <img src="saravana img/bathroom2.jpg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                            <a href="saravana img/living area.jpg" data-fancybox="gallery">
-                                <img src="saravana img/living area.jpg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="">
-                            <a href="own image/main_gate.jpeg" data-fancybox="gallery">
-                                <img src="own image/main_gate.jpeg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <a href="saravana img/inside playing 2.jpg" data-fancybox="gallery">
-                                <img src="saravana img/inside playing 2.jpg" alt="Image" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+function showSlide(index) {
+slides.forEach(slide => slide.classList.remove('active'));
+slides[index].classList.add('active');
+}
 
+function changeSlide(direction) {
+currentSlide += direction;
+if (currentSlide < 0) currentSlide = totalSlides - 1;
+if (currentSlide >= totalSlides) currentSlide = 0;
+showSlide(currentSlide);
+}
 
+function toggleMobileMenu() {
+const menu = document.getElementById('mobileMenu');
+const burger = document.querySelector('.burger');
+menu.classList.toggle('active');
+burger.classList.toggle('active');
+}
 
+// Auto-play slider
+setInterval(() => {
+changeSlide(1);
+}, 5000);
 
+// Touch/swipe support
+let touchStartX = 0;
+let touchEndX = 0;
 
-            <div class="untree_co--site-section py-5 bg-body-darker cta">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <h2>Rent for drivers’ quarters is Rs. 500 per day; Campfire will be provided on demand at additional Rs.1000 each time.</h2>
-                            <h3 class="m-0 p-0">If you have any special requests, please feel free to call us. <a href="tel://+91 94449 66732">+91 94449 66732</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+document.querySelector('.unique-slider-container').addEventListener('touchstart', e => {
+touchStartX = e.changedTouches[0].screenX;
+});
 
+document.querySelector('.unique-slider-container').addEventListener('touchend', e => {
+touchEndX = e.changedTouches[0].screenX;
+handleSwipe();
+});
 
-        </main>
+function handleSwipe() {
+if (touchEndX < touchStartX - 50) changeSlide(1);
+if (touchEndX > touchStartX + 50) changeSlide(-1);
+}
 
+// Initialize AOS
+$(document).ready(function() {
+AOS.init({
+duration: 800,
+once: true
+});
 
-        <footer class="untree_co--site-footer">
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 pr-md-5">
-                        <h3>About Us</h3>
-                        <p>Welcome to VAMSI’S WOODSIDE, where comfort meets nature! Nestled in a serene location, our villa offers a perfect escape from the hustle and bustle of daily life. Whether you're looking for a relaxing getaway, a family vacation,
-                            or a corporate retreat, we provide a luxurious stay with top-notch amenities and personalized hospitality.</p>
-                        <p>
-                            <a href="#" class="readmore"></a>
-                        </p>
-                    </div>
-                    <div class="col-md-8 ml-auto">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <h3>Navigation</h3>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Home</a></li>
-                                    <!-- <li><a href="#">Rooms</a></li> -->
-                                    <li><a href="#">Amenities</a></li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-9 ml-auto">
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <h4>Address</h4>
-                                        <address>It is located 10km from Yercaud lake on the way to Muluvi from Nagaloor.</address>
-                                        <address>Vamsi’s Woodside, 1523/4, Muluvi, <br>  Elavadi, Tamil Nadu 636602</address>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h3>Telephone</h3>
-                                        <p>
-                                            <a href="#">+91 94449 66732</a> <br>
-                                            <a href="#">75500 09664</a>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- <h3 class="mb-0">Join our newsletter</h3>
-                                <p>Be the first to know our latest updates and news!</p>
-                                <form action="#" method="" class="form-subscribe">
-                                    <div class="form-group d-flex">
-                                        <input type="email" class="form-control mr-2" placeholder="Enter your email">
-                                        <input type="submit" value="Subscribe" class="btn btn-black px-4 text-white">
-                                    </div>
-                                </form> -->
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="row mt-5 pt-5 align-items-center">
-                    <div class="col-md-6 text-md-left">
-                        <p>
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> <a href="index.html">Untree.co</a>. All Rights Reserved. Design by <a href="https://untree.co/" target="_blank" class="text-primary">Untree.co</a>
-                        </p>
-                    </div>
-                    <div class="col-md-6 text-md-right">
-                        <ul class="icons-top icons-dark">
-                            <li>
-                                <a href="#"><span class="icon-facebook"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-instagram"></span></a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon-tripadvisor"></span></a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div> -->
-
-            </div>
-
-        </footer>
-
-    </div>
-    <!-- Search -->
-    <div class="search-wrap">
-        <a href="#" class="close-search js-search-toggle">
-            <span>Close</span>
-        </a>
-        <div class="container">
-            <div class="row justify-content-center align-items-center text-center">
-                <div class="col-md-12">
-                    <form action="#">
-                        <input type="search" name="s" id="s" placeholder="Type a keyword and hit enter..." autocomplete="false">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-
-    <script src="js/vendor/owl.carousel.min.js"></script>
-
-    <script src="js/vendor/jarallax.min.js"></script>
-    <script src="js/vendor/jarallax-element.min.js"></script>
-    <script src="js/vendor/ofi.min.js"></script>
-
-    <script src="js/vendor/aos.js"></script>
-
-    <script src="js/vendor/jquery.lettering.js"></script>
-    <script src="js/vendor/jquery.sticky.js"></script>
-
-    <script src="js/vendor/jquery.fancybox.min.js"></script>
-
-    <script src="js/vendor/TweenMax.min.js"></script>
-    <script src="js/vendor/ScrollMagic.min.js"></script>
-    <script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
-    <script src="js/vendor/debug.addIndicators.min.js"></script>
-
-
-    <script src="js/main.js"></script>
-</body>
-
+// Initialize fancybox
+$('[data-fancybox="gallery"]').fancybox({
+buttons: [
+"zoom",
+"slideShow",
+"thumbs",
+"close"
+],
+loop: true,
+protect: true
+});
+});
+</script></body>
 </html>
