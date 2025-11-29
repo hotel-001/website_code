@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="own image/logo.jpg">
+
+  <meta name="description" content="Discover activities near Vamsi's Woodside - Yercaud sightseeing and trekking.">
+  <meta name="keywords" content="Yercaud sightseeing, trekking, campfire, Vamsis Woodside activities">
+  <meta name="theme-color" content="#E6E3D3">
+
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="css/vendor/icomoon.style.css">
+  <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/vendor/aos.css">
+  <link rel="stylesheet" href="css/vendor/animate.min.css">
+  <link rel="stylesheet" href="css/vendor/bootstrap.css">
+  <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ============ COMMON STYLES (FROM CONTACT PAGE) ============ */
+    :root {
+      --page-bg: #E6E3D3;
+      --white-bg: #FFFFFF;
+      --card-on-beige: #FFFFFF;
+      --card-on-white: #F2efe4;
+      --text-color: #3F3A34;
+      --accent: #C1A35F;
+      --accent-hover: #B89C82;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--page-bg) !important;
+      font-family: "Roboto", sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* BURGER ICON & MOBILE MENU STYLES */
+    .burger { display: none; position: relative; width: 28px; height: 20px; cursor: pointer; margin-left: auto; z-index: 10001; }
+    .burger span, .burger span::before, .burger span::after { content: ""; position: absolute; left: 0; width: 100%; height: 3px; background-color: #000; transition: 0.3s; }
+    .burger span::before { top: -8px; }
+    .burger span::after { top: 8px; }
+    .burger.active span { background-color: transparent; }
+    .burger.active span::before { transform: rotate(45deg); top: 0; }
+    .burger.active span::after { transform: rotate(-45deg); top: 0; }
+    @media (max-width: 991px) { .burger { display: block; } .site-nav-ul-wrap { display: none !important; } }
+
+    .mobile-menu { position: fixed; top: 0; left: -320px; width: 300px; height: 100vh; background: #ffffff; transition: left 0.3s ease; z-index: 10000; box-shadow: 5px 0 15px rgba(0,0,0,0.1); }
+    .mobile-menu.active { left: 0; }
+    .mobile-menu-header { padding: 20px; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: flex-end; align-items: center; }
+    .close-btn { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 16px; color: #000; text-decoration: none; }
+    .close-x { width: 20px; height: 20px; position: relative; }
+    .close-x::before, .close-x::after { content: ''; position: absolute; width: 20px; height: 2px; background-color: #000; top: 50%; left: 0; }
+    .close-x::before { transform: rotate(45deg); }
+    .close-x::after { transform: rotate(-45deg); }
+    .mobile-menu-list { list-style: none; padding: 0; margin: 0; }
+    .mobile-menu-list li { border-bottom: 1px solid #f0f0f0; }
+    .mobile-menu-list li a { display: block; padding: 18px 25px; color: #000; text-decoration: none; font-size: 16px; font-weight: 400; transition: background-color 0.2s; }
+    .mobile-menu-list li a:hover { background-color: #f8f8f8; }
+    .mobile-menu-list li.active a { font-weight: 600; background-color: #f8f8f8; }
+
+    /* NAVBAR */
+    .untree_co--site-nav { background-color: var(--page-bg); padding: 15px 0; position: relative; }
+    .untree_co--site-logo { color: #000; font-weight: 700; text-decoration: none; }
+    .site-nav-ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px; }
+    .site-nav-ul li a { color: #000; text-decoration: none; font-weight: 500; }
+    .site-nav-ul li.active a { color: var(--accent); }
+
+    /* SOCIAL ICONS */
+    .icons-top { display: flex; align-items: center; gap: 15px; list-style: none; margin: 0; padding: 0; }
+    .icons-top li a { background-color: transparent !important; }
+    .icons-top li img { width: 28px; height: 28px; transition: transform 0.3s; }
+    .icons-top li a:hover img { transform: scale(1.2); }
+
+    /* HERO SECTION STYLE (Updated) */
+    .untree_co--site-hero { 
+        height: 400px; 
+        /* Background image is set inline in HTML */
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        color: #fff; 
+    }
+    
+    .hero-heading { 
+        font-size: 52px; 
+        font-weight: 900; 
+        margin-bottom: 20px; 
+        font-family: 'Cormorant Garamond', serif; 
+        color: #ffffff !important; 
+        /* Removed text-shadow since we have overlay now, but kept it for extra pop */
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    /* ============ NEW STYLES FOR DISCOVER PAGE (ZIG-ZAG LAYOUT) ============ */
+    
+    /* Section Stripes (Beige/White/Beige) */
+    .section-wrapper {
+        width: 100%;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .section-wrapper:nth-of-type(odd) { background-color: var(--page-bg); }
+    .section-wrapper:nth-of-type(even) { background-color: var(--white-bg); }
+
+    /* Card Styles */
+    .activity-card {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(44, 40, 35, 0.08);
+        opacity: 0; /* Hidden for animation */
+        transform: translateY(50px);
+        transition: all 0.8s ease-out;
+    }
+
+    /* Card Colors based on background */
+    .section-wrapper:nth-of-type(odd) .activity-card { background-color: var(--card-on-beige); }
+    .section-wrapper:nth-of-type(even) .activity-card { background-color: var(--card-on-white); }
+
+    .activity-card.reveal { opacity: 1; transform: translateY(0); }
+    .activity-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(44, 40, 35, 0.15); }
+    
+    /* Flip Direction on Even items */
+    .section-wrapper:nth-of-type(even) .activity-card { flex-direction: row-reverse; }
+
+    .card-image { flex: 1; height: 350px; overflow: hidden; }
+    .card-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .activity-card:hover .card-image img { transform: scale(1.05); }
+
+    .card-content { flex: 1; padding: 40px; text-align: left; }
+    .card-content h2 { font-size: 1.8rem; margin-top: 0; margin-bottom: 15px; color: var(--text-color); border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 5px; font-family: 'Cormorant Garamond', serif; }
+    .card-content p { font-size: 1.05rem; color: var(--text-color); opacity: 0.9; line-height: 1.8; }
+
+    /* FOOTER & CTA STYLES */
+    .untree_co--site-footer { background-color: #1E1C1A; color: #ffffff !important; padding: 50px 0 30px; }
+    .untree_co--site-footer h3, .untree_co--site-footer h4, .untree_co--site-footer p, .untree_co--site-footer li, .untree_co--site-footer address, .untree_co--site-footer div { color: #ffffff !important; margin-bottom: 10px; }
+    .untree_co--site-footer ul { list-style: none; padding: 0; }
+    .untree_co--site-footer a { color: #cccccc; text-decoration: none; }
+    .untree_co--site-footer a:hover { color: var(--accent); }
+    .cta { background-color: #1E1C1A; color: #ffffff !important; padding: 40px 0; text-align: center; }
+    .cta h2 { margin-bottom: 15px; color: #ffffff !important; }
+    .cta p { color: #ffffff !important; }
+    .cta a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .cta a:hover { color: #fff; }
+
+    @media (max-width: 768px) {
+        .hero-heading { font-size: 32px; }
+        .section-wrapper { padding: 40px 0; }
+        .activity-card, .section-wrapper:nth-of-type(even) .activity-card { flex-direction: column; height: auto; }
+        .card-image { width: 100%; height: 250px; }
+        .card-content { padding: 25px; }
+    }
+  </style>
+
+  <title>Discover - VAMSI'S WOODSIDE</title>
+</head>
+
+<body>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="#" class="close-btn" onclick="toggleMobileMenu()">
+        <span>Close</span>
+        <div class="close-x"></div>
+      </a>
+    </div>
+    <ul class="mobile-menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="amenities.html">Amenities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="active"><a href="activities.html">Discover</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- NAVIGATION (HEADER) -->
+  <nav class="untree_co--site-nav">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Logo -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="own image/logo.jpg" alt="" style="width: 65px; border-radius: 50%;">
+        <a href="index.html" class="untree_co--site-logo">VAMSI'S WOODSIDE</a>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="site-nav-ul-wrap d-none d-lg-block">
+        <ul class="site-nav-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="active"><a href="activities.html">Discover</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Social Icons & Burger -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <ul class="icons-top d-none d-lg-block">
+          <li><a href="#"><img src="facebook.png" alt="facebook"></a></li>
+          <li><a href="https://wa.me/917550009664?text=Hello%2C%20I'm%20interested%20to%20book%20your%20villa!"><img src="whatsapp.png" alt="whatsapp"></a></li>
+          <li><a href="https://www.instagram.com/vamsis_woodside"><img src="instagram.png" alt="Instagram"></a></li>
+        </ul>
+        
+        <a href="#" class="burger d-block d-lg-none" onclick="toggleMobileMenu()">
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH IMAGE AND OVERLAY -->
+  <div class="untree_co--site-hero inner-page" 
+       style="background-image: url('outside/Shevaroy Hills.jpg'); background-size: cover; background-position: center; position: relative;">
+    
+    <!-- Dark Overlay for Text Readability -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4);"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <h1 class="hero-heading">Discover Yercaud</h1>
+    </div>
+  </div>
+
+  <!-- ================= START OF ACTIVITIES CONTENT ================= -->
+
+  <!-- SECTION 1: EMERALD LAKE (Beige BG) -->
+  <div class="section-wrapper">
+      <div class="container">
+          <div class="activity-card">
+              <div class="card-image">
+                  <!-- Note: Make sure path matches your folder. I kept your path here. -->
+                  <img src="outside/Emerald Lake (Yercaud Lake).jpg" alt="Emerald Lake">
+              </div>
+              <div class="card-content">
+                  <h2>Emerald Lake (Yercaud Lake)</h2>
+                  <p>A serene natural lake surrounded by lush hills, offering peaceful boating and calming views. Its emerald-green waters make it one of Yercaud’s most iconic and relaxing attractions.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- SECTION 2: PAGODA POINT (White BG) -->
+  <div class="section-wrapper">
+      <div class="container">
+          <div class="activity-card">
+              <div class="card-image">
+                  <img src="outside/Pagoda Point.jpg" alt="Pagoda Point">
+              </div>
+              <div class="card-content">
+                  <h2>Pagoda Point</h2>
+                  <p>A breathtaking viewpoint overlooking the valleys and Salem cityscape. The cool breeze and panoramic views make it a perfect spot for sunrise and sunset moments.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- SECTION 3: KILIYUR FALLS (Beige BG) -->
+  <div class="section-wrapper">
+      <div class="container">
+          <div class="activity-card">
+              <div class="card-image">
+                  <img src="outside/Kiliyur Falls.jpg" alt="Kiliyur Falls">
+              </div>
+              <div class="card-content">
+                  <h2>Kiliyur Falls</h2>
+                  <p>A stunning waterfall hidden within dense forest trails, ideal for nature lovers and adventure seekers. The cascading waters create a refreshing, picturesque escape.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- SECTION 4: BOTANICAL GARDEN (White BG) -->
+  <div class="section-wrapper">
+      <div class="container">
+          <div class="activity-card">
+              <div class="card-image">
+                  <img src="outside/Botanical Garden.jpg" alt="Botanical Garden">
+              </div>
+              <div class="card-content">
+                  <h2>Botanical Garden</h2>
+                  <p>A vibrant garden showcasing rare plants, colorful blooms, and curated landscape spaces. It’s a peaceful retreat for photography, walks, and nature appreciation.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- SECTION 5: SHEVAROY HILLS (Beige BG) -->
+  <div class="section-wrapper">
+      <div class="container">
+          <div class="activity-card">
+              <div class="card-image">
+                  <img src="outside/Shevaroy Hills.jpg" alt="Shevaroy Hills">
+              </div>
+              <div class="card-content">
+                  <h2>Shevaroy Hills</h2>
+                  <p>A high-altitude haven with misty peaks, cool climate, and dense forest surroundings. Known for its scenic beauty and tranquillity, it offers a rejuvenating experience away from the city.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- ================= END OF ACTIVITIES CONTENT ================= -->
+
+  <!-- CTA SECTION -->
+  <section class="cta">
+    <div class="container">
+      <h2>We also arrange on-road and off-road trips for our guests. Additional charges apply. For more details or bookings, please contact us now.</h2>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="untree_co--site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 pr-md-5">
+          <h3>About Us</h3>
+          <p>Welcome to VAMSI'S WOODSIDE, where comfort meets nature! Nestled in a serene location, our villa offers a perfect escape from hustle and bustle of daily life.</p>
+        </div>
+        <div class="col-md-8 ml-auto">
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Navigation</h3>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="activities.html">Discover</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-9 ml-auto">
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <h4>Address</h4>
+                  <address>Vamsi's Woodside, 1523/4, Muluvi, Elavadi, Tamil Nadu 636602</address>
+                </div>
+                <div class="col-md-6">
+                  <h3>Telephone</h3>
+                  <p>
+                    <a href="tel://+919444966732">94449 66732</a><br>
+                    <a href="tel://+917550009664">75500 09664</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const burger = document.querySelector('.burger');
+      menu.classList.toggle('active');
+      burger.classList.toggle('active');
+    }
+
+    // SCROLL ANIMATION SCRIPT
+    function reveal() {
+        var reveals = document.querySelectorAll(".activity-card");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("reveal");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal(); // Trigger on load
+  </script>
+
+  <!-- Vendor Scripts -->
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="js/vendor/popper.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="js/vendor/jarallax.min.js"></script>
+  <script src="js/vendor/jarallax-element.min.js"></script>
+  <script src="js/vendor/ofi.min.js"></script>
+  <script src="js/vendor/aos.js"></script>
+  <script src="js/vendor/jquery.lettering.js"></script>
+  <script src="js/vendor/jquery.sticky.js"></script>
+  <script src="js/vendor/jquery.fancybox.min.js"></script>
+  <script src="js/vendor/TweenMax.min.js"></script>
+  <script src="js/vendor/ScrollMagic.min.js"></script>
+  <script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
+  <script src="js/vendor/debug.addIndicators.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
