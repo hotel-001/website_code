@@ -16,6 +16,10 @@
   <link rel="stylesheet" href="css/vendor/aos.css">
   <link rel="stylesheet" href="css/vendor/animate.min.css">
   <link rel="stylesheet" href="css/vendor/bootstrap.css">
+
+  <!-- FANCYBOX CSS (ithu munnadiye correct ah irunthuchu) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -57,32 +61,6 @@ html, body {
   background-color: var(--page-bg) !important; /* Scroll pannum podhu thaan indha color theriyanum */
   box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .untree_co--site-logo {
   color: #000 !important;
@@ -141,7 +119,24 @@ html, body {
 .js-sticky-wrapper { background-color: var(--page-bg) !important; border:none; margin:0; padding:0; }
 
 
-
+/* ================================================= */
+/* ====== TEXT COLOR FIX CODE-AH INGA ADD PANNITEN ==== */
+/* ================================================= */
+/* --- Amenity Box Text Color Fix --- */
+/* Link-kulla irukura text-oda color-ah pazhaya maari maathuradhuku */
+a .media-29191 h3,
+a .media-29191 p {
+  color: var(--text-color) !important; /* Unga pazhaya text color (#3F3A34) */
+  text-decoration: none !important;   /* Link-oda underline-ah edukkuradhuku */
+}
+/* Mouse vechchaalum color maarama iruka */
+a:hover .media-29191 h3,
+a:hover .media-29191 p {
+  color: var(--text-color) !important;
+}
+/* ================================================= */
+/* ============== PUDHU CODE MUDINJIRUCHU ============ */
+/* ================================================= */
 
 
 </style>
@@ -289,80 +284,85 @@ html, body {
                         </div>
                     </div>
                     <div class="row custom-row-02192 align-items-stretch">
-                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                            <div class="media-29191 text-center h-100">
-                                <div class="media-29191-icon">
-                                    <img src="own asset/svg/bedroom.svg" alt="Image" class="img-fluid">
-                                </div>
-                                <h3>Spacious 3 Bedrooms</h3>
-                                <p>Enjoy a comfortable stay in well-furnished, airy rooms designed for relaxation and luxury.</p>
-                                <p>
-                                    <p>
-                                        <a href="#" class="readmore reverse"></a>
-                                    </p>
-                                </p>
-                            </div>
-                        </div>
+                      <!-- Spacious 3 Bedrooms -->
+<div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+    <a href="saravana img/bedroom2.jpg" data-fancybox data-caption="Spacious 3 Bedrooms: Enjoy a comfortable stay in our well-furnished rooms.">
+        <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+                <img src="own asset/svg/bedroom.svg" alt="Image" class="img-fluid">
+            </div>
+            <h3>Spacious 3 Bedrooms</h3>
+            <p>Enjoy a comfortable stay in well-furnished, airy rooms designed for relaxation and luxury.</p>
+        </div>
+    </a>
+</div>
 
-                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="media-29191 text-center h-100">
-                                <div class="media-29191-icon">
-                                    <img src="own asset/svg/wifi.svg" alt="Image" class="img-fluid">
-                                </div>
-                                <h3>Wi-Fi & Smart TV </h3>
-                                <p> Stay connected with high-speed internet and enjoy unlimited entertainment with a Smart TV.</p>
-                                <p>
-                                    <p>
-                                        <a href="#" class="readmore reverse"></a>
-                                    </p>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                            <div class="media-29191 text-center h-100">
-                                <div class="media-29191-icon">
-                                    <img src="own asset/svg/fire.svg" alt="Image" class="img-fluid">
-                                </div>
-                                <h3>Bonfire Area</h3>
-                                <p> Gather around a cozy bonfire under the stars, perfect for memorable evenings with family and friends.</p>
-                                <p>
-                                    <p>
-                                        <a href="#" class="readmore reverse"></a>
-                                    </p>
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="media-29191 text-center h-100">
-                                <div class="media-29191-icon">
-                                    <img src="own asset/svg/kitchen.svg" alt="Image" class="img-fluid">
-                                </div>
-                                <h3>Fully Equipped Kitchen</h3>
-                                <p> Cook delicious meals with ease using our fridge, cutlery, cooking gas with a stove, and essential kitchenware.</p>
-                                <p>
-                                    <p>
-                                        <a href="#" class="readmore reverse"></a>
-                                    </p>
-                                </p>
-                            </div>
-                        </div>
 
-                        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-                            <div class="media-29191 text-center h-100">
-                                <div class="media-29191-icon">
-                                    <img src="images/svg/partners.svg" alt="Image" class="img-fluid">
-                                </div>
 
-                                <h3>Games & Recreation</h3>
-                                <p>Engage in fun indoor and outdoor games, ensuring entertainment for guests of all ages.</p>
-                                <p>
-                                    <p>
-                                        <a href="#" class="readmore reverse"></a>
-                                    </p>
-                                </p>
-                            </div>
-                        </div>
+
+
+
+
+
+                       <!-- Wi-Fi & Smart TV -->
+<div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+    <a href="own image/tv.jpeg" data-fancybox data-caption="Wi-Fi & Smart TV: Stay connected and enjoy unlimited entertainment.">
+        <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+                <img src="own asset/svg/wifi.svg" alt="Image" class="img-fluid">
+            </div>
+            <h3>Wi-Fi & Smart TV</h3>
+            <p>Stay connected with high-speed internet and enjoy unlimited entertainment with a Smart TV.</p>
+        </div>
+    </a>
+</div>
+                       <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+    
+    <!-- ======================================================== -->
+    <!-- ITHULA MAATHUNATHA GAVANINGA -->
+    <a href="saravana img/fire.jpg" data-fancybox data-caption="Bonfire Area - A cozy spot for memorable evenings.">
+        <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+                <img src="own asset/svg/fire.svg" alt="Image" class="img-fluid">
+            </div>
+            <h3>Bonfire Area</h3>
+            <p> Gather around a cozy bonfire under the stars, perfect for memorable evenings with family and friends.</p>
+        </div>
+    </a>
+    <!-- ======================================================== -->
+
+</div>
+                        <!-- Fully Equipped Kitchen -->
+<div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
+    <a href="own image/kitchen.jpeg" data-fancybox data-caption="Fully Equipped Kitchen: Cook your favorite meals with all the essentials.">
+        <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+                <img src="own asset/svg/kitchen.svg" alt="Image" class="img-fluid">
+            </div>
+            <h3>Fully Equipped Kitchen</h3>
+            <p>Cook delicious meals with ease using our fridge, cutlery, cooking gas with a stove, and essential kitchenware.</p>
+        </div>
+    </a>
+</div>
+
+                        <!-- Games & Recreation -->
+<div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+    <a href="saravana img/inside playing 2.jpg" data-fancybox data-caption="Games & Recreation: Fun for all ages with foosball, table tennis, and a projector for entertainment.">
+        <div class="media-29191 text-center h-100">
+            <div class="media-29191-icon">
+                <img src="images/svg/partners.svg" alt="Image" class="img-fluid">
+            </div>
+            <h3>Games & Recreation</h3>
+            <p>Engage in fun indoor and outdoor games, ensuring entertainment for guests of all ages.</p>
+        </div>
+    </a>
+</div>
+
+
+
+
+
                         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
                             <div class="media-29191 text-center h-100">
                                 <div class="media-29191-icon">
@@ -524,9 +524,40 @@ html, body {
     <script src="js/vendor/ScrollMagic.min.js"></script>
     <script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
     <script src="js/vendor/debug.addIndicators.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 
 
     <script src="js/main.js"></script>
+
+
+        <!-- ...unga matha script files ellam inga irukum... -->
+    <script src="js/main.js"></script>
+
+    <!-- ======================================================== -->
+    <!-- INTHA SCRIPT-AH KADAISIYA PODUNGA -->
+    <script>
+      // Page load aana odane, idhu run aagum
+      $(document).ready(function() {
+        // 'data-fancybox' nu attribute irukura ella link-kum
+        // ippo fancybox pop-up la open aagum.
+        $('[data-fancybox]').fancybox({
+            loop: true, // Last image-ku aprom first image varanum
+            protect: true, // Right-click panni image-ah download panna mudiyadhu
+            buttons: [
+                "zoom",
+                "slideShow",
+                "fullScreen",
+                "thumbs",
+                "close"
+            ]
+        });
+      });
+    </script>
+    <!-- ======================================================== -->
+
+</body>
+</html>
 </body>
 
 </html>
